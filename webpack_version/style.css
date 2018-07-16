@@ -1,0 +1,9 @@
+body{
+	margin:0;
+	/* background-image: linear-gradient(to top, #dedede 0%, #ababab 100%); */
+	background-color: hsl(40,0%,30%);
+}
+
+#c{
+	background-color: #898989;
+}
