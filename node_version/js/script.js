@@ -2,7 +2,6 @@ var _P = _P || {};
 _P.w = 400;
 _P.h = 300;
 _P.fs = require('fs');
-_P.Request = require('pixl-request');
 _P.Canvas = require('canvas');
 _P.canvas = new _P.Canvas(_P.w, _P.h);
 _P.ctx = _P.canvas.getContext('2d');
