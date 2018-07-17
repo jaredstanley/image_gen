@@ -5,7 +5,7 @@ const maxPoints= 10000;
 
 
 function createBaseShape(s) {
-  console.log("createBaseShape");
+  // console.log("createBaseShape");
   // console.log(this.shapes["shapeArr_0"]);
   for (var i = 0; i < 4; i++) {
     // if(this.totalPoints<this.maxPoints){
@@ -69,7 +69,7 @@ class Shape {
     return newArr;
   }
   generateLayer(pos) {
-    console.log("generateLayer");
+    // console.log("generateLayer");
     var tmparr = this.baseShape.slice();
 
     for (var i = 0; i < 3; i++) {
@@ -79,7 +79,7 @@ class Shape {
     this.shapes["shapeArr_"+pos]=tmparr.slice();
   }
   drawShape(_arr) {
-    console.log("shape is drawing now...");
+    // console.log("shape is drawing now...");
       this.app.ctx.fillStyle=this.color;
       // this.app.ctx.fillStyle="rgba(155,10,10,0.013324)";
 

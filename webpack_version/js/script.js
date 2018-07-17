@@ -1,6 +1,5 @@
 import utils from './utils';
 import Shape from './shape';
-import moment from 'moment';
 import { writeFile } from 'fs-web';
 
 let _App = {
@@ -29,25 +28,28 @@ let _App = {
     this.colorsArr =["rgba(10,10,0, 0.006)","rgba(0,111,0, 0.01z0)","rgba(9,123,0, 0.008)","rgba(0,11,111, 0.0059)"]
     // // // //
     // //style 1
-    this.ctx.fillStyle="rgb(235,10,10)";
+    this.ctx.fillStyle="rgb(235,10,210)";
     this.ctx.globalCompositeOperation = "screen";
     this.colorsArr =["rgba(105,105,105, 0.006)","rgba(110,111,0, 0.01)","rgba(199,43,10, 0.008)","rgba(0,111,211, 0.0059)"]
     // // // // //
     // //style 2
-    this.ctx.fillStyle="rgb(255,222,255)";
-    this.ctx.globalCompositeOperation = "color-burn";
-    this.colorsArr =["rgba(105,0,105, 0.026)","rgba(255,151,0, 0.01)","rgba(199,43,10, 0.008)","rgba(50,111,211, 0.0059)"]
+    // this.ctx.fillStyle="rgb(255,222,110)";
+    // this.ctx.globalCompositeOperation = "color-burn";
+    // this.colorsArr =["rgba(105,0,105, 0.026)","rgba(255,151,0, 0.01)","rgba(199,43,10, 0.008)","rgba(50,111,211, 0.0059)"]
     // // // // //
-    // this.ctx.fillStyle="rgb(0,255,0)";
+    // this.ctx.fillStyle="rgb(220,155,110)";
     // this.ctx.globalCompositeOperation = "screen";
-    // this.colorsArr =["rgba(255,0,05, 0.926)","rgba(110,151,0, 0.01)","rgba(199,43,10, 0.008)","rgba(0,111,211, 0.0059)"]
+    // // console.log(utils.blendModeArr.length);
+    // this.ctx.globalCompositeOperation = utils.blendModeArr[Math.round(Math.random()*utils.blendModeArr.length)];
+    // this.colorsArr =["rgba(0,0,05, 0.926)","rgba(110,151,0, 0.01)","rgba(199,43,10, 0.008)","rgba(0,111,211, 0.0059)"]
 
 
 
     this.ctx.fillRect(0,0,this.w, this.h);
 
     // this.loadImg("src/img_src/-computer-equipment-325223.jpg");
-    this.loadImg("src/img_src/-pattern-technology-440313.jpg");
+    this.loadImg("src/img_src/ad-tablet-technology-touch.jpg");
+    // this.loadImg("src/img_src/-pattern-technology-440313.jpg");
     // this.loadImg("src/img_src/-biking-bike-biking-71104.jpeg");
     // this.loadImg("src/img_src/artphone-wristwatch-325153.jpg");
     this.createShape();
