@@ -1,5 +1,6 @@
 import utils from './utils';
 import Shape from './shape';
+import imgList from './myjsonfile';
 import { writeFile } from 'fs-web';
 
 let _App = {
@@ -28,9 +29,10 @@ let _App = {
     this.colorsArr =["rgba(10,10,0, 0.006)","rgba(0,111,0, 0.01z0)","rgba(9,123,0, 0.008)","rgba(0,11,111, 0.0059)"]
     // // // //
     // //style 1
-    this.ctx.fillStyle="rgb(235,10,210)";
-    this.ctx.globalCompositeOperation = "screen";
-    this.colorsArr =["rgba(105,105,105, 0.006)","rgba(110,111,0, 0.01)","rgba(199,43,10, 0.008)","rgba(0,111,211, 0.0059)"]
+    this.ctx.fillStyle="rgb(205,150,0)";
+    this.ctx.globalCompositeOperation = "color-burn";
+    // this.ctx.globalCompositeOperation = "soft-light";
+    this.colorsArr =["rgba(205,185,0, 0.06)","rgba(110,220,0, 0.001)","rgba(199,43,10, 0.008)","rgba(0,33,211, 0.059)"]
     // // // // //
     // //style 2
     // this.ctx.fillStyle="rgb(255,222,110)";
@@ -46,9 +48,13 @@ let _App = {
 
 
     this.ctx.fillRect(0,0,this.w, this.h);
-
+    var d = "src/img_src/";
     // this.loadImg("src/img_src/-computer-equipment-325223.jpg");
-    this.loadImg("src/img_src/ad-tablet-technology-touch.jpg");
+    var num = imgList.items.length;
+    var itm = Math.round(Math.random()*num);
+    var path = d+imgList.items[itm];
+    //console.log(imgList.items[itm]);
+    this.loadImg(path);
     // this.loadImg("src/img_src/-pattern-technology-440313.jpg");
     // this.loadImg("src/img_src/-biking-bike-biking-71104.jpeg");
     // this.loadImg("src/img_src/artphone-wristwatch-325153.jpg");
@@ -98,6 +104,7 @@ let _App = {
     this.imgObj.onload = function(){
       console.log("imgloaded");
       _App.ctx.globalCompositeOperation = "hard-light";
+      // _App.ctx.globalCompositeOperation = "overlay";
       _App.ctx.drawImage(_App.imgObj, 0,0, _App.w, _App.h);
       //
     }
