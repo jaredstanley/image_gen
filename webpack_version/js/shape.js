@@ -24,7 +24,7 @@ function createBaseShape(s) {
 // new
 class Shape {
   constructor(app, color) {
-    console.log("Shape constructor");
+    // console.log("Shape constructor");
     this.subdivisions = 0;
     this.totalPoints = 0;
     this.app = app;
@@ -34,9 +34,9 @@ class Shape {
     createBaseShape(this);
   }
   createStartingPoints() {
-    let num_pts = 9;
+    let num_pts = 7;
     let ang = 0;
-    let rad = this.app.w*0.5;
+    let rad = this.app.w*.55;
     let step = (2*Math.PI)/num_pts;
     for (var i = 0; i < num_pts; i++) {
       var _x = this.app.centerw+Math.cos(ang)*rad*utils.getRandom();

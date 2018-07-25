@@ -26,14 +26,16 @@ _P.SrcImgMgr = {
     // console.log("createImageList....");
     _P.fs.readdir(_P.App.dir, function(err, items) {
       for (var i=0; i<items.length; i++) {
-          // console.log(i);
+          // console.log(items[i]);
           _P.SrcImgMgr.imgList.push(items[i])
       }
+			var json = JSON.stringify(_P.SrcImgMgr.imgList);
+			console.log(json);
       console.log(_P.SrcImgMgr.imgList.length+" items counted");
       // console.log("....createImageList completed");
 			_P.SrcImgMgr.path = _P.SrcImgMgr.imgList[613]
 			var p = _P.SrcImgMgr.path;
-			_P.SrcImgMgr.loadNextImage(_P.App.dir+p);
+			// _P.SrcImgMgr.loadNextImage(_P.App.dir+p);
     });
   },
 	loadNextImage:function(url){
